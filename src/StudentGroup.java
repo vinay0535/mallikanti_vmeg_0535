@@ -25,6 +25,10 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
+		if(students==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		// Add your implementation here
 		return students;
 	}
@@ -32,6 +36,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		if(students==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		this.students=students;
 		//return null;
 	}
@@ -65,6 +73,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		if(student==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		Student[] temp=new Student[this.students.length+1];
 		temp[0]=student;
 		for(int i=1;i<temp.length;i++)
@@ -77,6 +89,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		if(student==null) 
+			{
+				throw new IllegalArgumentException();
+			}
+		
 		Student[] temp=new Student[this.students.length+1];
 		int i;
 		for( i=0;i<temp.length-1;i++)
@@ -221,18 +238,30 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
+		if(date==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		return null;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
+		if(firstDate==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		return null;
 	}
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
+		if(date==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		return null;
 	}
 
