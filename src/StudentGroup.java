@@ -52,7 +52,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		if(index<0) //|| //index>this.student.length)
+		if(index<0) 
 			{
 				throw new IllegalArgumentException();
 			}
@@ -92,6 +92,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		if(index<0) 
+			{
+				throw new IllegalArgumentException();
+			}
 		Student[] temp=new Student[this.students.length+1];
 		for(int i=0; i<index-1; i++)
 		{
@@ -108,6 +112,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		if(index<0) 
+			{
+				throw new IllegalArgumentException();
+			}
 		Student[] temp=new Student[this.students.length-1];
 		int c=0;
 		for(int i=0; i<this.students.length; i++)
@@ -122,6 +130,10 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(Student student) {
+		if(student==null) 
+			{
+				throw new IllegalArgumentException();
+			}
 		// Add your implementation here
 		Student[] temp=new Student[this.students.length-1];
 		int c=0;
@@ -138,6 +150,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		if(index<0) 
+			{
+				throw new IllegalArgumentException();
+			}
 		Student[] temp=new Student[this.students.length-1];
 		int c=0;
 		for(int i=0; i<this.students.length; i++)
@@ -154,6 +170,14 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		if(student==null) 
+			{
+				throw new IllegalArgumentException();
+			}
+		if(student==null)
+		{
+			
+		}
 		Student[] temp=new Student[this.students.length-1];
 		int c=0;
 		for(int i=0; i<this.students.length; i++)
