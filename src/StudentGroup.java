@@ -33,6 +33,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public void setStudents(Student[] students) {
 		// Add your implementation here
 		this.students=students;
+		//return null;
 	}
 
 	@Override
@@ -44,6 +45,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		//this.student=student;
+		//this.index=index;
+		//return null;
 	}
 
 	@Override
