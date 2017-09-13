@@ -54,7 +54,7 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				throw new IllegalArgumentException();
 			}
-		return null;
+		return students[index];
 	}
 
 	@Override
@@ -64,7 +64,7 @@ public class StudentGroup implements StudentArrayOperation {
 			{
 				throw new IllegalArgumentException();
 			}
-		
+		students[index]=student;
 		//this.student=student;
 		//this.index=index;
 		//return null;
